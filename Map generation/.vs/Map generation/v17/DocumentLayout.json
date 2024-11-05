@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Program Files (x86)\\Perfect Storm\\Map-generation\\Map generation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{89CD68A8-FD57-626A-B2D9-77FC925EB5AD}|Assembly-CSharp.csproj|d:\\program files (x86)\\perfect storm\\map-generation\\map generation\\assets\\scripts\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89CD68A8-FD57-626A-B2D9-77FC925EB5AD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mapgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89CD68A8-FD57-626A-B2D9-77FC925EB5AD}|Assembly-CSharp.csproj|D:\\Program Files (x86)\\Perfect Storm\\Map-generation\\Map generation\\assets\\scripts\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89CD68A8-FD57-626A-B2D9-77FC925EB5AD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89CD68A8-FD57-626A-B2D9-77FC925EB5AD}|Assembly-CSharp.csproj|D:\\Program Files (x86)\\Perfect Storm\\Map-generation\\Map generation\\assets\\scripts\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89CD68A8-FD57-626A-B2D9-77FC925EB5AD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MapGenerator.cs",
+              "DocumentMoniker": "D:\\Program Files (x86)\\Perfect Storm\\Map-generation\\Map generation\\Assets\\Scripts\\MapGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MapGenerator.cs",
+              "ToolTip": "D:\\Program Files (x86)\\Perfect Storm\\Map-generation\\Map generation\\Assets\\Scripts\\MapGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MapGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T10:50:45.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Map.cs",
+              "DocumentMoniker": "D:\\Program Files (x86)\\Perfect Storm\\Map-generation\\Map generation\\Assets\\Scripts\\Map.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Map.cs",
+              "ToolTip": "D:\\Program Files (x86)\\Perfect Storm\\Map-generation\\Map generation\\Assets\\Scripts\\Map.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Map.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T10:49:09.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Room.cs",
+              "DocumentMoniker": "D:\\Program Files (x86)\\Perfect Storm\\Map-generation\\Map generation\\Assets\\Scripts\\Room.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Room.cs",
+              "ToolTip": "D:\\Program Files (x86)\\Perfect Storm\\Map-generation\\Map generation\\Assets\\Scripts\\Room.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Room.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T10:47:48.936Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
