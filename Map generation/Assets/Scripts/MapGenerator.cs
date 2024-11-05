@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
 {
-    public GameObject roomPrefab;
-    int totalLevels = 3;
-
+    public GameObject roomPrefab; // Prefab pokoju
+    public int totalLevels = 3; // Liczba poziomów
+    public int roomsPerLevel = 3; // Liczba pokoi na poziomie
+    public float spacing = 2.0f; // Odleg³oœæ miêdzy pokojami w poziomie
 
     void Start()
     {
@@ -16,43 +17,23 @@ public class MapGenerator : MonoBehaviour
     void GenerateMap()
     {
         List<Room> rooms = new List<Room>();
-        int totalLevels = 3; // Liczba poziomów
 
         for (int level = 1; level <= totalLevels; level++)
         {
-            int roomsPerLevel = 3; // Liczba pokoi na danym poziomie
-
             for (int i = 0; i < roomsPerLevel; i++)
             {
-                Vector3 randomPosition = new Vector3(Random.Range(-10f, 10f), level * 2, Random.Range(-10f, 10f)); // Ustal pozycjê na poziomie
-                GameObject newRoomObject = Instantiate(roomPrefab, randomPosition, Quaternion.identity);
-                Room newRoom = new Room(randomPosition, newRoomObject, level); // Przekazuj poziom
+                Vector3 position = new Vector3(i * spacing, level * 2, 0); // Ustal pozycjê w linii
+                GameObject newRoomObject = Instantiate(roomPrefab, position, Quaternion.identity);
+                Room newRoom = new Room(position, newRoomObject, level);
                 rooms.Add(newRoom);
             }
         }
 
         // Po³¹czenia miêdzy pokojami
-        CreateConnections(rooms, totalLevels);
+        CreateConnections(rooms);
     }
 
-
-    void ConnectRooms(Room roomA, Room roomB)
-    {
-        // Dodaj roomB do po³¹czeñ roomA
-        roomA.connectedRooms.Add(roomB);
-
-        // Dodaj roomA do po³¹czeñ roomB, jeœli chcesz, aby po³¹czenia by³y dwukierunkowe
-        roomB.connectedRooms.Add(roomA);
-
-        // Tworzenie LineRenderer miêdzy pokojami
-        LineRenderer line = roomA.roomObject.AddComponent<LineRenderer>();
-        line.SetPosition(0, roomA.position);
-        line.SetPosition(1, roomB.position);
-        // Dodatkowe ustawienia linii, np. kolor, gruboœæ itp.
-    }
-
-
-    void CreateConnections(List<Room> rooms, int totalLevels)
+    void CreateConnections(List<Room> rooms)
     {
         for (int level = 1; level < totalLevels; level++)
         {
@@ -63,10 +44,24 @@ public class MapGenerator : MonoBehaviour
             {
                 foreach (var roomB in nextLevelRooms)
                 {
-                    // Wywo³anie ConnectRooms z odpowiednimi argumentami
                     ConnectRooms(roomA, roomB);
                 }
             }
         }
+    }
+
+    void ConnectRooms(Room roomA, Room roomB)
+    {
+        roomA.connectedRooms.Add(roomB);
+        roomB.connectedRooms.Add(roomA);
+
+        LineRenderer line = roomA.roomObject.AddComponent<LineRenderer>();
+        line.SetPosition(0, roomA.position);
+        line.SetPosition(1, roomB.position);
+        line.startWidth = 0.1f; // Gruboœæ linii
+        line.endWidth = 0.1f;   // Gruboœæ linii
+        line.material = new Material(Shader.Find("Sprites/Default")); // Ustaw materia³
+        line.startColor = Color.white; // Kolor linii
+        line.endColor = Color.white;   // Kolor linii
     }
 }
