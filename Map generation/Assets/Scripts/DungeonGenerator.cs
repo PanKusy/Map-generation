@@ -10,6 +10,7 @@ public class DungeonGenerator : MonoBehaviour
     public GameObject pointPrefab;        // Prefab punktu do wizualizacji
     [Range(0,1)]
     public float positionVariance = 1.0f; // Zakres losowego przesuniêcia pozycji
+    public Material material;
 
     private List<List<GameObject>> dungeonPoints = new List<List<GameObject>>();   // Lista poziomów i punktów
 
@@ -141,6 +142,9 @@ public class DungeonGenerator : MonoBehaviour
         lineRenderer.positionCount = 2;
         lineRenderer.SetPosition(0, from.transform.position);
         lineRenderer.SetPosition(1, to.transform.position);
+        lineRenderer.material = material;
+        lineRenderer.textureMode = LineTextureMode.Tile;
+        //lineRenderer.material.mainTextureScale = new Vector2(Vector3.Distance(from.transform.position, to.transform.position), 1);
     }
 
     bool IsConnected(GameObject from, GameObject to)
