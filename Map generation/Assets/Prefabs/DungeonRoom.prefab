@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 5670934564583155383}
   - component: {fileID: 1739311588385924410}
   - component: {fileID: 8373617844915098175}
-  - component: {fileID: -6100977733993345508}
   - component: {fileID: -6923505022430713206}
+  - component: {fileID: 3431960140607552052}
   m_Layer: 0
-  m_Name: DungeonNode
+  m_Name: DungeonRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,20 +110,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-6100977733993345508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5813659638944994011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb3b41b725ff61b478f77810a44d9211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Level: 0
-  Connections: []
 --- !u!120 &-6923505022430713206
 LineRenderer:
   serializedVersion: 2
@@ -132,7 +118,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5813659638944994011}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -231,3 +217,16 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &3431960140607552052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5813659638944994011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c73de48513c524aad02cad23e07ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 0
